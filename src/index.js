@@ -2,7 +2,7 @@
 const init = () => {
     fetch(`http://localhost:3000/ramens`)
     .then(response => response.json())
-    .then(data => data.forEach(renderRamen));
+    .then(ramen => ramen.forEach(renderRamen));
 
     document.getElementById('new-ramen').addEventListener('submit', addRamen);
 }
@@ -38,7 +38,7 @@ function addRamen(event){
         rating: ramenForm.querySelector('#new-rating').value,
         comment: ramenForm.querySelector('#new-comment').value
     };
-    console.log(newRamen);
+    // console.log(newRamen);
     renderRamen(newRamen);
 
     ramenForm.reset();
