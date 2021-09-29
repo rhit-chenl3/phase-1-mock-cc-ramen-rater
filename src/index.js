@@ -11,11 +11,10 @@ document.addEventListener("DOMContentLoaded", init)
 
 function renderRamen(ramen){
     const imagesHolder = document.getElementById("ramen-menu");
-    const image = document.createElement('img');
-    image.src = ramen.image;
-    image.alt = ramen
-    imagesHolder.appendChild(image);
-    imagesHolder.addEventListener('click', () => showDetails(ramen));
+    const ramenImage = document.createElement('img');
+    ramenImage.src = ramen.image;
+    imagesHolder.appendChild(ramenImage);
+    ramenImage.addEventListener('click', () => showDetails(ramen));
 }
 
 function showDetails(ramen){
